@@ -7,6 +7,7 @@
 #include <vtkImageData.h>
 #include <vtkXMLImageDataWriter.h>
 #include <vtkDoubleArray.h>
+
 #include <vtkSelectEnclosedPoints.h>
 #include <vtkPointData.h>
 #include <vtkCellData.h>
@@ -32,7 +33,7 @@ int main() {
         double theta = 2.0 * M_PI * i / nPoints;
         double x = cx + r * std::cos(theta);
         double y = cy + r * std::sin(theta);
-        double z = 0.0;
+        double z = 0.0;  // 2D krivka leží v rovine XY
         points->InsertNextPoint(x, y, z);
     }
 
